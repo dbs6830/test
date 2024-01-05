@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>틀고정 - DIV/css만</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.3.2/jquery-migrate.min.js"></script>
+	<script type="text/javascript">
+	//<![CDATA[
+		$(document).ready(function(){
+		});
+	//]]>
+	</script>
+	<style>
+		*{margin:0;padding:0;}
+		.tableWrap{position:relative;width:100%;height:400px;overflow:auto;}
+		.tableWrap>div{width:1200px;}
+		.tableWrap .row{display:flex;}
+		.tableWrap .row .type_fix{display:flex;position:sticky;left:0;flex-basis:20%;}
+		.tableWrap .row .type_move{display:flex;flex:1;}
+		.tableWrap .col{flex:1;border-right:1px solid #ccc;border-bottom:1px solid #ccc;padding:10px;}
+		.tableWrap .type_fix .col:first-child{border-left:1px solid #ccc;}
+		.tableWrap .thead{position:sticky;top:0;z-index:1;border-top:2px solid #000;}
+		.tableWrap .thead .col{background:#e7e7e7;}
+		.tableWrap .tbody .type_fix .col{background:#bce0f5;}
+	</style>
+</head>
+<body><div style="width:600px;margin:20px auto;">
+	<div class="tableWrap">
+		<div class="thead">
+			<div class="row">
+				<div class="type_fix">
+					<div class="col"><p>1구분</p></div>
+					<div class="col"><p>2구분</p></div>
+				</div>
+				<div class="type_move">
+					<div class="col">1</div>
+					<div class="col">2</div>
+					<div class="col">3</div>
+					<div class="col">4</div>
+					<div class="col">5</div>
+					<div class="col">6</div>
+					<div class="col">7</div>
+					<div class="col">8</div>
+				</div>
+			</div>
+		</div>
+		<div class="tbody">
+			<div class="row">
+				<div class="type_fix">
+					<div class="col"><p>1구분</p></div>
+					<div class="col"><p>2구분</p></div>
+				</div>
+				<div class="type_move">
+					<div class="col">1</div>
+					<div class="col">2</div>
+					<div class="col">3</div>
+					<div class="col">4</div>
+					<div class="col">5</div>
+					<div class="col">6</div>
+					<div class="col">7</div>
+					<div class="col">8</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="type_fix">
+					<div class="col"><p>rowspan 형태는 불가능</p></div>
+				</div>
+				<div class="type_move">
+					<div class="col">colspan도 따로 css 필요할듯?</div>
+					<div class="col">2</div>
+					<div class="col">3</div>
+					<div class="col">4</div>
+					<div class="col">5</div>
+					<div class="col">6</div>
+					<div class="col">7</div>
+					<div class="col">8</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="type_fix">
+					<div class="col"><p>1구분</p></div>
+					<div class="col"><p>2구분</p></div>
+					<div class="col"><p>3구분</p></div>
+				</div>
+				<div class="type_move">
+					<div class="col">1</div>
+					<div class="col">2</div>
+					<div class="col">3</div>
+					<div class="col">4</div>
+					<div class="col">5</div>
+					<div class="col">6</div>
+					<div class="col">7</div>
+					<div class="col">8</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="type_fix">
+					<div class="col"><p>1구분</p></div>
+					<div class="col"><p>2구분</p></div>
+				</div>
+				<div class="type_move">
+					<div class="col">1</div>
+					<div class="col">2</div>
+					<div class="col">3</div>
+					<div class="col">4</div>
+					<div class="col">5</div>
+					<div class="col">6</div>
+					<div class="col">7</div>
+					<div class="col">8</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="type_fix">
+					<div class="col"><p>1구분</p></div>
+					<div class="col"><p>2구분</p></div>
+				</div>
+				<div class="type_move">
+					<div class="col">1</div>
+					<div class="col">2</div>
+					<div class="col">3</div>
+					<div class="col">4</div>
+					<div class="col">5</div>
+					<div class="col">6</div>
+					<div class="col">7</div>
+					<div class="col">8</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="type_fix">
+					<div class="col"><p>1구분</p></div>
+					<div class="col"><p>2구분</p></div>
+				</div>
+				<div class="type_move">
+					<div class="col">1</div>
+					<div class="col">2</div>
+					<div class="col">3</div>
+					<div class="col">4</div>
+					<div class="col">5</div>
+					<div class="col">6</div>
+					<div class="col">7</div>
+					<div class="col">8</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="type_fix">
+					<div class="col"><p>1구분</p></div>
+					<div class="col"><p>2구분</p></div>
+				</div>
+				<div class="type_move">
+					<div class="col">1</div>
+					<div class="col">2</div>
+					<div class="col">3</div>
+					<div class="col">4</div>
+					<div class="col">5</div>
+					<div class="col">6</div>
+					<div class="col">7</div>
+					<div class="col">8</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="type_fix">
+					<div class="col"><p>1구분</p></div>
+					<div class="col"><p>2구분</p></div>
+				</div>
+				<div class="type_move">
+					<div class="col">1</div>
+					<div class="col">2</div>
+					<div class="col">3</div>
+					<div class="col">4</div>
+					<div class="col">5</div>
+					<div class="col">6</div>
+					<div class="col">7</div>
+					<div class="col">8</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="type_fix">
+					<div class="col"><p>1구분</p></div>
+					<div class="col"><p>2구분</p></div>
+				</div>
+				<div class="type_move">
+					<div class="col">1</div>
+					<div class="col">2</div>
+					<div class="col">3</div>
+					<div class="col">4</div>
+					<div class="col">5</div>
+					<div class="col">6</div>
+					<div class="col">7</div>
+					<div class="col">8</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="type_fix">
+					<div class="col"><p>1구분</p></div>
+					<div class="col"><p>2구분</p></div>
+				</div>
+				<div class="type_move">
+					<div class="col">1</div>
+					<div class="col">2</div>
+					<div class="col">3</div>
+					<div class="col">4</div>
+					<div class="col">5</div>
+					<div class="col">6</div>
+					<div class="col">7</div>
+					<div class="col">8</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="type_fix">
+					<div class="col"><p>1구분</p></div>
+					<div class="col"><p>2구분</p></div>
+				</div>
+				<div class="type_move">
+					<div class="col">1</div>
+					<div class="col">2</div>
+					<div class="col">3</div>
+					<div class="col">4</div>
+					<div class="col">5</div>
+					<div class="col">6</div>
+					<div class="col">7</div>
+					<div class="col">8</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div></body>
+</html>
