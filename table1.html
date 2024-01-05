@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>틀고정 - table형/css만</title>
+	<style>	
+		.fixTable{width:500px;height:200px;margin:auto;overflow:auto;}
+		.fixTable table{border-collapse:separate;border-spacing:0;text-align:center;}
+		.fixTable th, .fixTable td{padding:10px;min-width:100px;border-bottom:1px solid #ccc;border-right:1px solid #ccc;}
+		.fixTable th{position:sticky;top:0;left:0;z-index:1;background:#e7e7e7;}
+		.fixTable th.fir{border-left:1px solid #ccc;}
+		.fixTable thead th{border-top:2px solid #000;}
+		.fixTable thead th.fir{z-index:2;}
+	</style>
+</head>
+<body>
+	<div class="fixTable">
+		<table>
+			<thead>
+				<tr>
+					<th class="fir" scope="col">fir</th>
+					<th colspan="2" scope="col">colspan만 가능</th>
+					<th scope="col">헤드</th>
+					<th scope="col">헤드</th>
+					<th scope="col">헤드</th>
+					<th scope="col">헤드</th>
+					<th scope="col">헤드</th>
+					<th scope="col">헤드</th>
+					<th scope="col">헤드</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th class="fir" scope="row">fir</th>
+					<td>내용</td>
+					<td>내용</td>
+					<td>내용</td>
+					<td>내용</td>
+					<td>내용</td>
+					<td>내용</td>
+					<td>내용</td>
+					<td>내용</td>
+					<td>내용</td>
+				</tr>
+				<tr>
+					<th class="fir" rowspan="2" scope="row">rowspan만 <br />가능</th>
+					<td rowspan="2">rowspan <br />가능</td>
+					<td colspan="2">colspan 가능</td>
+					<td>내용</td>
+					<td>내용</td>
+					<td>내용</td>
+					<td>내용</td>
+					<td>내용</td>
+					<td>내용</td>
+				</tr>
+				<tr>
+					<td>내용</td>
+					<td>내용</td>
+					<td>내용</td>
+					<td>내용</td>
+					<td>내용</td>
+					<td>내용</td>
+					<td>내용</td>
+					<td>내용</td>
+				</tr>
+				<tr>
+					<th class="fir" scope="row">fir</th>
+					<td>내용</td>
+					<td>내용</td>
+					<td>내용</td>
+					<td>내용</td>
+					<td>내용</td>
+					<td>내용</td>
+					<td>내용</td>
+					<td>내용</td>
+					<td>내용</td>
+				</tr>
+				<tr>
+					<th class="fir" scope="row">fir</th>
+					<td>내용</td>
+					<td>내용</td>
+					<td>내용</td>
+					<td>내용</td>
+					<td>내용</td>
+					<td>내용</td>
+					<td>내용</td>
+					<td>내용</td>
+					<td>내용</td>
+				</tr>
+				<tr>
+					<th class="fir" scope="row">fir</th>
+					<td>내용</td>
+					<td>내용</td>
+					<td>내용</td>
+					<td>내용</td>
+					<td>내용</td>
+					<td>내용</td>
+					<td>내용</td>
+					<td>내용</td>
+					<td>내용</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
